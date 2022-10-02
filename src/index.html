@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo</title>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <header class="header_todo"> 
+                    <h1 class="main-title">Todos</h1>
+            </header>
+
+            <section class="content">
+                <div class="header-content">
+                    <label class="selection-btn">
+                        <input type="checkbox"/>
+                    </label>
+
+                    <form method="input">
+                        <input type="text" name="text-todo" placeholder="What needs to be done?"/>
+                    </form>
+                </div>
+                
+                <div class="todos">
+                    <ul class="todos-variants">  
+                        <li class="todo">
+                            <label class="text-todo"> 
+                                <input type="checkbox" id="switch" value="1"/>
+                                <input type="text" value="HTML" id="text-checkbox"/>
+                            </label>
+                            <form method="remove-todo"> 
+                                <button class="remove-todo-btn">
+                                    <span class="remove-todo-btn-text">x</span>
+                                </button>
+                            </form>
+                        </li>
+
+                        <li class="todo">
+                            <label class="text-todo"> 
+                                <input type="checkbox" id="switch" value="2"/>
+                                <input type="text" value="CSS" id="text-checkbox"/>
+                            </label>
+
+                            <form method="remove-todo"> 
+                                <button class="remove-todo-btn">
+                                    <span class="remove-todo-btn-text">x</span>
+                                </button>
+                            </form>
+                        </li>
+
+                        <li class="todo">
+                            <label class="text-todo"> 
+                                <input type="checkbox" id="switch" value="3"/>
+                                <input type="text" value="JS" id="text-checkbox"/>
+                            </label>
+                            
+                            <form method="remove-todo"> 
+                                <button class="remove-todo-btn">
+                                    <span class="remove-todo-btn-text">x</span>
+                                </button>
+                            </form>
+                        </li>
+
+                        <li class="todo">
+                            <label class="text-todo"> 
+                                <input type="checkbox" id="switch" value="4"/>
+                                <input type="text" value="JS tools" id="text-checkbox"/>
+                            </label>
+
+                            <form method="remove-todo"> 
+                                <button class="remove-todo-btn">
+                                    <span class="remove-todo-btn-text">x</span>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="control-board">
+                    <div class="cnt-todos">
+                        <span class="cnt-todos-text">3 items left</span>
+                    </div>
+
+                    <div class="values-sorting">
+                        <form method="switch-sorting-todos">
+                            <input type="radio" id="choiceSort" name="choice" value="All">
+                            <label for="contactChoice1">
+                                <span class="choice-sort-text">All</span>
+                            </label>
+                        
+                            <input type="radio" id="choiceSort" name="choice" value="Active">
+                            <label for="contactChoice2">
+                                <span class="choice-sort-text">Active</span> 
+                            </label>
+                        
+                            <input type="radio" id="choiceSort" name="choice" value="Completed">
+                            <label for="contactChoice3">
+                                <span class="choice-sort-text">Completed</span>
+                            </label>
+                        </form>
+                    </div>
+
+                    <div class="clear-todos">
+                        <form method="clearing-todos">
+                            <button class="clear-todo-btn">
+                                <span class="clear-todo-btn-text">Clear completed</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>            
+            </footer>    
+        </div>
+    </body>
+</html>
