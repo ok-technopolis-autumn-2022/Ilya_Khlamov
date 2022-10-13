@@ -8,108 +8,134 @@
     </head>
     <body>
         <div class="main-wrapper">
-            <header class="header_todo"> 
-                    <h1 class="main-title">Todos</h1>
+            <header class="todo-app__header"> 
+                    <h1 class="todo-app__main-title">Todos</h1>
             </header>
+            <main class="todo-app__frame">
+                <section class="todo-app__main-controls"> 
+                        <label class="selection-btn">
+                            <input type="checkbox"/>
+                        </label>
 
-            <section class="content">
-                <div class="header-content">
-                    <label class="selection-btn">
-                        <input type="checkbox"/>
-                    </label>
+                        <label>
+                            <input type="text" name="text-todo" placeholder="What needs to be done?"/>
+                        </label>
+                </section>    
 
-                    <form method="input">
-                        <input type="text" name="text-todo" placeholder="What needs to be done?"/>
-                    </form>
-                </div>
-                
-                <div class="todos">
-                    <ul class="todos-variants">  
-                        <li class="todo">
-                            <label class="text-todo"> 
-                                <input type="checkbox" id="switch" value="1"/>
-                                <input type="text" value="HTML" id="text-checkbox"/>
-                            </label>
-                            <form method="remove-todo"> 
-                                <button class="remove-todo-btn">
-                                    <span class="remove-todo-btn-text">x</span>
-                                </button>
-                            </form>
-                        </li>
+                <section class="todo-app__tasks">
+                        <ul class="todo-app__task-list tasks">  
+                            <li class="todo-app__task-item task-item">
+                                <div class="task-item__view">
+                                    <input type="checkbox" 
+                                        class="task-item__status" 
+                                        aria-label="Completed html"
+                                    />
+                                    <span class="task-item__text">HTML</span>
+                                    <button class="remove-todo-btn">x</button>
+                                </div>
+                                
+                                <div class="task-item__edit" hidden="hidden">
+                                    <input type="text" 
+                                        class="task-item__input-text" 
+                                        aria-label="Edit task"
+                                    />
+                                </div>
+                            </li>
 
-                        <li class="todo">
-                            <label class="text-todo"> 
-                                <input type="checkbox" id="switch" value="2"/>
-                                <input type="text" value="CSS" id="text-checkbox"/>
-                            </label>
-
-                            <form method="remove-todo"> 
-                                <button class="remove-todo-btn">
-                                    <span class="remove-todo-btn-text">x</span>
-                                </button>
-                            </form>
-                        </li>
-
-                        <li class="todo">
-                            <label class="text-todo"> 
-                                <input type="checkbox" id="switch" value="3"/>
-                                <input type="text" value="JS" id="text-checkbox"/>
-                            </label>
+                            <li class="todo-app__task-item task-item">
+                                <div class="task-item__view">
+                                    <input type="checkbox" 
+                                        class="task-item__status" 
+                                        aria-label="Completed CSS"
+                                    />
+                                    <span class="task-item__text">CSS</span>
+                                    <button class="remove-todo-btn">x</button>
+                                </div>
+                                
+                                <div class="task-item__edit" hidden="hidden">
+                                    <input type="text" 
+                                        class="task-item__input-text" 
+                                        aria-label="Edit task"
+                                    />
+                                </div>
+                            </li>
                             
-                            <form method="remove-todo"> 
-                                <button class="remove-todo-btn">
-                                    <span class="remove-todo-btn-text">x</span>
-                                </button>
-                            </form>
-                        </li>
+                            <li class="todo-app__task-item task-item">
+                                <div class="task-item__view">
+                                    <input type="checkbox" 
+                                        class="task-item__status" 
+                                        aria-label="Completed JS"
+                                    />
+                                    <span class="task-item__text">JS</span>
+                                    <button class="remove-todo-btn">x</button>
+                                </div>
+                                
+                                <div class="task-item__edit" hidden="hidden">
+                                    <input type="text" 
+                                        class="task-item__input-text" 
+                                        aria-label="Edit task"
+                                    />
+                                </div>
+                            </li>
 
-                        <li class="todo">
-                            <label class="text-todo"> 
-                                <input type="checkbox" id="switch" value="4"/>
-                                <input type="text" value="JS tools" id="text-checkbox"/>
-                            </label>
+                            <li class="todo-app__task-item task-item">
+                                <div class="task-item__view">
+                                    <input type="checkbox" 
+                                        class="task-item__status" 
+                                        aria-label="Completed html"
+                                    />
+                                    <span class="task-item__text">JS tools</span>
+                                    <button class="remove-todo-btn">x</button>
+                                </div>
+                                
+                                <div class="task-item__edit" hidden="hidden">
+                                     <input type="text" 
+                                        class="task-item__input-text" 
+                                        aria-label="Edit task"
+                                    />
+                                </div>
+                            </li>
+                        </ul>
+                </section>
+            </main>
 
-                            <form method="remove-todo"> 
-                                <button class="remove-todo-btn">
-                                    <span class="remove-todo-btn-text">x</span>
-                                </button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <footer class="footer">
-                <div class="control-board">
-                    <div class="cnt-todos">
-                        <span class="cnt-todos-text">3 items left</span>
+            <footer class="todo-app__footer">
+                <div class="todo-app__control-board control-board">
+                    <div class="control-board__cnt-todos">
+                        <span class="control-board__cnt-todos-text">3 items left</span>
                     </div>
 
-                    <div class="values-sorting">
-                        <form method="switch-sorting-todos">
-                            <input type="radio" id="choiceSort" name="choice" value="All">
-                            <label for="contactChoice1">
-                                <span class="choice-sort-text">All</span>
-                            </label>
-                        
-                            <input type="radio" id="choiceSort" name="choice" value="Active">
-                            <label for="contactChoice2">
-                                <span class="choice-sort-text">Active</span> 
-                            </label>
-                        
-                            <input type="radio" id="choiceSort" name="choice" value="Completed">
-                            <label for="contactChoice3">
-                                <span class="choice-sort-text">Completed</span>
-                            </label>
-                        </form>
+                    <div class="control-board__values-sorting values-sorting">
+                        <label for="All" class="values-sorting__display-choice display-choice">
+                            <input type="radio" 
+                                id="All" 
+                                name="display-choice" 
+                                value="All" checked
+                            />
+                            <span class="display-choice__text">All</span>
+                        </label>
+                    
+                        <label for="Active" class="values-sorting__display-choice display-choice">
+                            <input type="radio" 
+                                id="Active" 
+                                name="display-choice" 
+                                value="Active"
+                            />
+                            <span class="display-choice__text">Active</span> 
+                        </label>
+                    
+                        <label for="Completed" class="values-sorting__display-choice display-choice">
+                            <input type="radio" 
+                                id="Completed" 
+                                name="display-choice" 
+                                value="Completed"
+                            />
+                            <span class="display-choice__text">Completed</span>
+                        </label>
                     </div>
 
-                    <div class="clearing-todos">
-                        <form method="clear-todos">
-                            <button class="clear-todo-btn">
-                                <span class="clear-todo-btn-text">Clear completed</span>
-                            </button>
-                        </form>
+                    <div class="control-board__clear-todos clear-todos">
+                        <button class="clear-todos__todo-btn">Clear completed</button>
                     </div>
                 </div>            
             </footer>    
