@@ -8,8 +8,8 @@
     </head>
     <body>
         <div class="main-wrapper">
-            <header class="todo-app__header"> 
-                    <h1 class="todo-app__main-title">Todos</h1>
+            <header class="todo-app__header" aria-label="Название сайта"> 
+                <h1 class="todo-app__main-title">Todos</h1>
             </header>
 
             <main class="todo-app__frame">
@@ -30,7 +30,7 @@
                 </section>    
 
                 <section class="todo-app__tasks">
-                    <ul class="todo-app__task-list tasks">  
+                    <ul class="todo-app__task-list tasks" aria-label="Список задач"> 
                         <li class="todo-app__task-item task-item">
                             <div class="task-item__view">
                                 <input type="checkbox" 
@@ -108,8 +108,8 @@
             
             <footer class="todo-app__footer">
                 <div class="todo-app__control-board control-board">
-                    <div class="control-board__cnt-todos">
-                        <span class="control-board__cnt-todos-text" >3 items left</span>
+                    <div class="control-board__cnt-todos" aria-label="Количество оставшихся задач">
+                        <span class="control-board__cnt-todos-text">3 items left</span>
                     </div>
 
                     <div class="control-board__values-sorting values-sorting" aria-label="Выбор режима показа задач">
