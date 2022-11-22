@@ -16,10 +16,7 @@
             <main class="todo-app__frame">
                 <section class="todo-app__main-controls">
                     <div class="todo-app__main__selection-btn">
-                        <button class="selection-btn" aria-label = "Выделить все задачи">
-                            <img class="img-selection-btn" src="Style/images/select-all.png" alt="Выделить все задачи">
-                        </button>
-                        
+                        <button class="selection-btn" aria-label = "Выделить все задачи"></button> 
                     </div>
 
                     <label class="todo-app__main__create-new-input">
@@ -130,27 +127,30 @@
                     <div class="control-board__values-sorting values-sorting" aria-label="Выбор режима показа задач">
                         <label class="filter-choice" for="All" class="values-sorting__display-choice display-choice">
                             <input type="radio"
-                                    id="All"
-                                    name="display-choice"
-                                    value="All"
+                                class="filter-choice__input"
+                                id="All"
+                                name="display-choice"
+                                value="All"
                             />
                             <span class="display-choice__replica" aria-label ="Показать все задачи" >All</span>
                         </label>
 
                         <label class="filter-choice" for="Active" class="values-sorting__display-choice display-choice">
                             <input type="radio"
-                                    id="Active"
-                                    name="display-choice"
-                                    value="Active"
+                                class="filter-choice__input"
+                                id="Active"
+                                name="display-choice"
+                                value="Active"
                             />
                             <span class="display-choice__replica" aria-label="Показать только активные задачи" checked>Active</span>
                         </label>
 
                         <label class="filter-choice" for="Completed" class="values-sorting__display-choice display-choice">
                             <input type="radio"
-                                    id="Completed"
-                                    name="display-choice"
-                                    value="Completed"
+                                class="filter-choice__input"
+                                id="Completed"
+                                name="display-choice"
+                                value="Completed"
                             />
                             <span class="display-choice__replica" aria-label="Показать только выполненные задачи">Completed</span>
                         </label>

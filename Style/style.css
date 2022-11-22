@@ -1,18 +1,13 @@
 /*_____________________ [FONTS | IMG ] ______________________*/
 
-img, picture {
-    max-width: 100%;
-    display: block;
-}
 
 @font-face {
     font-family: Roboto;
     src: url("fonts/Roboto-Light.ttf");
 }
 
-span {
-    font-family: sans-serif;
-    color:#666666;
+h1 {
+    margin: 0;
 }
 
 /*_____________________ [FONTS | IMG ] ______________________*/
@@ -22,12 +17,14 @@ span {
 
 /*________________  [ BODY | MAIN-WRAPPER ] _________________*/
 
+
 body {
     margin: 0 ;
     align-items: center;
     justify-content: center;
     background-color: #F2F2F2;
     font-family: Roboto, sans-serif;
+    color:#666666;
 }
 
 .main-wrapper {
@@ -48,8 +45,6 @@ body {
     letter-spacing: -2.5px;
     color: #CCCCCC;
     text-align: center;
-    margin-block-start: 0;
-    margin-block-end: 0;
 }
 
 /*________________  [ HEADER TITLE ] _________________*/
@@ -98,26 +93,22 @@ body {
     border-bottom: 1px solid #0003;
 }
 
-.todo-app__main__selection-btn {
-    display: block;
+.todo-app__main__selection-btn{
+    text-align: center;
     width: 64px;
-    height: 64px;   
 }
 
 .selection-btn {
-    background: #FFFFFF;
+    background-color: white;
+    background-image: url("images/select-all.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     border: 0px solid #E6E6E6;
-    width: 64px;
-    height: 64px; 
-    padding: 22px 18px;
-    cursor: pointer;
-}
-
-.img-selection-btn {
     width: 28px;
     height: 16px;
+    cursor: pointer;
 }
-
 
 .todo-app__main__create-new-input {
     height: 64px;
@@ -133,7 +124,7 @@ body {
 }
 
 .todo-app__main__create-new-input > input::placeholder {
-    font-family: Roboto, Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 24px;
     line-height: 64px;
 }
@@ -170,23 +161,19 @@ body {
 }
 
 .task-item__view:hover > button {
-    display: unset;
-    border: none;
-    width: 40px;
-    height: 40px;
-
     background-color:  #fafafa;
     background-image: url("images/remove.svg");
     background-repeat: no-repeat;
-
     background-position: 50%;
-    margin-right: 2px;
+}
+
+.task-item__view:focus > button {
+    border: 1px solid #5dc2af;
 }
 
 .task-item__view {
     display: flex;
     align-items: center;
-    width: 560px;
     height: 40px;
     padding: 12px 0px 12px 0px;
     justify-content: space-between;
@@ -203,12 +190,6 @@ body {
     flex-shrink: 0;
     margin: 0px 0 0 -25px;
 } 
-
-.task-item__view label {
-    display: flex;
-    align-items: center;
-    width: 518px;
-}
 
 .task-item__status-replica {
     display: inline-block;
@@ -231,20 +212,27 @@ body {
     background-size: 25px;
 }
 
+.task-item__status:focus + .task-item__status-replica {
+    border: 1px solid #5dc2af;
+}
 
 .task-item__status:checked ~ .task-item__text {
     text-decoration: line-through;
 }
+
 .task-item__text {
     text-overflow: ellipsis;
     flex: auto;
     overflow: hidden;
-    font-family: Roboto;
 }
 
 .remove-todo-btn {
-    display: none;
+    border: none;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    margin-right: 8px;
 }
 
 /*________________  [ TASKS | CONTENT ] _________________*/
@@ -256,7 +244,6 @@ body {
 
 .todo-app__control-board {
     display: flex;
-    width: 542px;
     background: #FFFFFF;
     box-shadow: inset 0px 1px 0px #0003;
     align-items: center;
@@ -274,17 +261,23 @@ body {
     display: flex;
 }
 
-
-input[type="radio"] {
-    background-color: #0000;
-    display: none;
-    border: 0;
-    width: 1px;
-    margin-left: -10px;
+.filter-choice {
+    display: flex;
+    align-items: center;
+    margin: 4px;
 }
 
-input[type="radio"]:checked + .display-choice__replica {
+.filter-choice__input{
+    background-color: #0000;
+    width: 0px;
+}
+
+.filter-choice__input:checked + .display-choice__replica {
     border: 1px solid black;
+}
+
+.filter-choice__input:focus + .display-choice__replica {
+    border: 1px solid blue;
 }
 
 .display-choice__replica {
