@@ -58,7 +58,7 @@ body {
     max-width: 562px;
     margin: 0 auto;
     position: relative;
-    box-shadow: 0 2px 4px #0003;
+    border: 1px solid #0003;
 }
 
 .todo-app__frame::after{
@@ -96,18 +96,19 @@ body {
 .todo-app__main__selection-btn{
     text-align: center;
     width: 64px;
+    height: 66px;
 }
 
 .selection-btn {
     background-color: white;
     background-image: url("images/select-all.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 30px;
     background-position: center;
     border: 0px solid #E6E6E6;
-    width: 28px;
-    height: 16px;
     cursor: pointer;
+    width: 64px;
+    height: 66px;
 }
 
 .todo-app__main__create-new-input {
@@ -157,18 +158,19 @@ body {
     min-width: 562px;
     font-size: 24px; 
     overflow: hidden;
-    box-shadow: inset 0px -1px 0px #0003;
+    border-bottom: 1px solid #0003;
 }
 
-.task-item__view:hover > button {
-    background-color:  #fafafa;
+.task-item__view:hover > .remove-todo-btn {
     background-image: url("images/remove.svg");
-    background-repeat: no-repeat;
-    background-position: 50%;
 }
 
-.task-item__view:focus > button {
-    border: 1px solid #5dc2af;
+.task-item__view:focus > .remove-todo-btn {
+    background-image: url("images/remove.svg");
+}
+
+.remove-todo-btn:focus {
+    background-image: url("images/remove.svg");
 }
 
 .task-item__view {
@@ -177,6 +179,9 @@ body {
     height: 40px;
     padding: 12px 0px 12px 0px;
     justify-content: space-between;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
 }
 
 .todo-app__task-item:hover {
@@ -207,9 +212,6 @@ body {
 .task-item__status:checked + .task-item__status-replica {
     border: 1px solid #5DC2AF;
     background-image: url("../Style/images/completed.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25px;
 }
 
 .task-item__status:focus + .task-item__status-replica {
@@ -233,6 +235,9 @@ body {
     height: 40px;
     background-color: #FFFFFF;
     margin-right: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
 }
 
 /*________________  [ TASKS | CONTENT ] _________________*/
@@ -245,10 +250,10 @@ body {
 .todo-app__control-board {
     display: flex;
     background: #FFFFFF;
-    box-shadow: inset 0px 1px 0px #0003;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    border-top: 1px solid #0003;
 }
 
 .control-board__cnt-todos {
