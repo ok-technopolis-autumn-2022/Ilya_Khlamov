@@ -20,6 +20,7 @@ h1 {
 
 body {
     margin: 0 ;
+    min-width: 600px;
     align-items: center;
     justify-content: center;
     background-color: #F2F2F2;
@@ -177,6 +178,7 @@ body {
     display: flex;
     align-items: center;
     height: 40px;
+    min-width: 0;
     padding: 12px 0px 12px 0px;
     justify-content: space-between;
     background-position: center;
