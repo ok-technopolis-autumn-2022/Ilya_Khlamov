@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo</title>
+        <link href="Style/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <header class="todo-app__header" aria-label="Название сайта"> 
+                <h1 class="todo-app__main-title">todos</h1>
+            </header>
+        
+            <main class="todo-app__frame">
+                <section class="todo-app__main-controls">
+                    <div class="todo-app__main__selection-btn">
+                        <button class="selection-btn" aria-label = "Выделить все задачи"></button> 
+                    </div>
+
+                    <label class="todo-app__main__create-new-input">
+                        <input type="text"
+                            class="button-create-new-input"
+                            name="text-todo"
+                            placeholder="What needs to be done?"
+                            aria-label="Вписать новую задачу"
+                        />
+                    </label>
+                </section>
+
+                <section class="todo-app__tasks">
+                    <ul class="todo-app__task-list tasks" aria-label="Список задач">
+                        <li class="todo-app__task-item task-item">
+                            <div class="task-item__view">
+                                <label class="task-item__view label">
+                                    <input type="checkbox" 
+                                        class="task-item__status"
+                                        aria-label="Задача HTML"
+                                    />
+                                    <span class="task-item__status-replica"></span>
+                                    <span class="task-item__text" aria-label="Задача HTML">HTML</span>
+                                </label>
+                                <button class="remove-todo-btn" aria-label="Удалить задачу"></button>
+                            </div>
+
+                            <div class="task-item__edit" hidden="hidden">
+                                <input type="text"
+                                    class="task-item__input-text"
+                                    aria-label="Отредактировать задачу"
+                                />
+                            </div>
+                        </li>
+
+                        <li class="todo-app__task-item task-item">
+                            <div class="task-item__view">
+                                <label class="task-item__view label">
+                                    <input type="checkbox" 
+                                        class="task-item__status"
+                                        aria-label="Задача CSS"
+                                    />
+                                    <span class="task-item__status-replica"></span>
+                                    <span class="task-item__text" aria-label="Задача CSS">CSS</span>
+                                </label>
+                                <button class="remove-todo-btn" aria-label="Удалить задачу"></button>
+                            </div>
+
+                            <div class="task-item__edit" hidden="hidden">
+                                <input type="text"
+                                    class="task-item__input-text"
+                                    aria-label="Отредактировать задачу"
+                                />
+                            </div>
+                        </li>
+
+                        <li class="todo-app__task-item task-item">
+                            <div class="task-item__view">
+                                <label class="task-item__view label">
+                                    <input type="checkbox" 
+                                        class="task-item__status"
+                                        aria-label="Задача JS"
+                                    />
+                                    <span class="task-item__status-replica"></span>
+                                    <span class="task-item__text" aria-label="Задача JS tools">JS</span>
+                                </label>
+
+                                <button class="remove-todo-btn" aria-label="Удалить задачу"></button>
+                            </div>
+
+                            <div class="task-item__edit" hidden="hidden">
+                                <input type="text"
+                                    class="task-item__input-text"
+                                    aria-label="Отредактировать задачу"
+                                />
+                            </div>
+                        </li>
+
+                        <li class="todo-app__task-item task-item">
+                            <div class="task-item__view">
+                                <label class="task-item__view label">
+                                    <input type="checkbox" 
+                                        class="task-item__status"
+                                        aria-label="Задача JS tools"
+                                    />
+                                    <span class="task-item__status-replica"></span>
+                                    <span class="task-item__text" aria-label="Задача JS tools">JS tools</span>
+                                </label>
+
+                                <button class="remove-todo-btn" aria-label="Удалить задачу"></button>
+                            </div>
+
+                            <div class="task-item__edit" hidden="hidden">
+                                <input type="text"
+                                    class="task-item__input-text"
+                                    aria-label="Отредактировать задачу"
+                                />
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="todo-app__control-board">
+                    <div class="control-board__cnt-todos" aria-label="Количество оставшихся задач">
+                        <span class="control-board__cnt-todos-text">3 items left</span>
+                    </div>
+
+                    <div class="control-board__values-sorting values-sorting" aria-label="Выбор режима показа задач">
+                        <label class="filter-choice" for="All" class="values-sorting__display-choice display-choice">
+                            <input type="radio"
+                                class="filter-choice__input"
+                                id="All"
+                                name="display-choice"
+                                value="All"
+                            />
+                            <span class="display-choice__replica" aria-label ="Показать все задачи" >All</span>
+                        </label>
+
+                        <label class="filter-choice" for="Active" class="values-sorting__display-choice display-choice">
+                            <input type="radio"
+                                class="filter-choice__input"
+                                id="Active"
+                                name="display-choice"
+                                value="Active"
+                            />
+                            <span class="display-choice__replica" aria-label="Показать только активные задачи" checked>Active</span>
+                        </label>
+
+                        <label class="filter-choice" for="Completed" class="values-sorting__display-choice display-choice">
+                            <input type="radio"
+                                class="filter-choice__input"
+                                id="Completed"
+                                name="display-choice"
+                                value="Completed"
+                            />
+                            <span class="display-choice__replica" aria-label="Показать только выполненные задачи">Completed</span>
+                        </label>
+                    </div>
+
+                    <div class="control-board__clear-todos clear-todos">
+                        <button class="clear-todos__todo-btn" aria-label="Удалить выполненные задачи">Clear completed</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
